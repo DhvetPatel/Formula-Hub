@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>FormulaHub – JEE, NEET & CBSE Formulas for Class 11–12</title>
+  <meta name="description" content="Chapter-wise Maths, Physics and Chemistry formulas for JEE, NEET and CBSE Class 11–12. Search by topic, subject or any parameter.">
+  <meta name="theme-color" content="#f0eadf">
+  <link rel="icon" type="image/jpeg" href="formulahub-sigma-favicon.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Math&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Apply saved theme before paint (no flash) -->
+  <script>
+    try {
+      var t = localStorage.getItem('fh-theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="brand" href="#/" aria-label="FormulaHub home">
+        <span class="brand-mark" aria-hidden="true">∑</span>
+        <span class="brand-name">Formula<b>Hub</b></span>
+      </a>
+
+      <form class="search" role="search" id="searchForm" autocomplete="off">
+        <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+        <input id="searchInput" type="search" name="q" placeholder="Search a formula, topic, subject or parameter…" aria-label="Search formulas" spellcheck="false">
+        <kbd class="search-hint" aria-hidden="true">/</kbd>
+        <button type="button" id="searchClear" class="search-clear" aria-label="Clear search" hidden>×</button>
+      </form>
+
+      <div class="menu-wrap">
+        <button id="menuBtn" class="icon-btn" aria-label="Open menu" aria-expanded="false" aria-controls="menu" aria-haspopup="true">
+          <span class="burger" aria-hidden="true"><i></i><i></i><i></i></span>
+        </button>
+        <nav id="menu" class="menu" aria-hidden="true" aria-label="Main menu">
+          <a class="menu-item" href="#/" data-close><span class="mi-ico">⌂</span> Home</a>
+          <button class="menu-item" type="button" id="aboutBtn"><span class="mi-ico">ⓘ</span> About</button>
+          <button class="menu-item menu-theme" type="button" id="themeToggle" role="switch" aria-checked="false">
+            <span class="mi-ico" id="themeIcon">☾</span>
+            <span id="themeLabel">Dark mode</span>
+            <span class="switch" aria-hidden="true"><i></i></span>
+          </button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ MAIN (rendered by app.js) ============ -->
+  <main id="main" class="container" tabindex="-1">
+    <noscript><p class="empty">Please enable JavaScript to use FormulaHub.</p></noscript>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span id="footerText"></span>
+      <span class="footer-note">Always cross-check with your textbook before exams.</span>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- Data (add / edit formulas in these files) -->
+  <script src="data-maths.js"></script>
+  <script src="data-physics.js"></script>
+  <script src="data-chemistry.js"></script>
+  <!-- App -->
+  <script src="app.js"></script>
+</body>
+</html>
